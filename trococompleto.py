@@ -1,26 +1,10 @@
-valor_total = float(input("Digite o valor total da conta: "))
-valor_pago = float(input("Digite o valor pago pelo cliente: "))
+carros_vendidos = int(input("Digite o número de carros vendidos: "))
+valor_vendas = float(input("Digite o valor total das vendas: R$"))
+salario_fixo = float(input("Digite o salário fixo do vendedor: R$"))
+comissao_carro = float(input("Digite o valor da comissão por carro vendido: R$"))
 
-troco = valor_pago - valor_total
+salario_comissao = comissao_carro * carros_vendidos
+salario_percentual = 0.06 * valor_vendas
+salario_final = salario_fixo + salario_comissao + salario_percentual
 
-notas = [200, 100, 50, 20, 10, 5, 2]
-moedas = [1, 0.5, 0.25, 0.10, 0.05, 0.01]
-
-troco_dict = {}
-
-for nota in notas:
-    if troco >= nota:
-        qtd_notas = troco // nota
-        troco_dict[f'{nota} reais'] = int(qtd_notas)
-        troco -= qtd_notas * nota
-
-for moeda in moedas:
-    moeda_em_centavos = int(moeda * 100)
-    if troco >= moeda:
-        qtd_moedas = int(troco // moeda)
-        troco_dict[f'{moeda_em_centavos} centavos'] = qtd_moedas
-        troco -= qtd_moedas * moeda
-
-print("O troco é:")
-for chave, valor in troco_dict.items():
-    print(f"{valor} {chave}")
+print("O salário final do vendedor é: R${:.2f}".format(salario_final))
