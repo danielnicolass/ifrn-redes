@@ -1,18 +1,18 @@
-peso = float(input("Digite o seu peso em kg: "))
-altura = float(input("Digite a sua altura em metros: "))
+peso = float(input("Digite o seu peso: "))
+altura = float(input("Digite a sua altura: "))
 
 imc = peso / (altura ** 2)
 print("Seu IMC é:", imc)
 
 if imc < 18.5:
-    print("Classificação: Abaixo do peso")
+    print("Abaixo do peso")
 elif imc < 25:
-    print("Classificação: Peso normal")
+    print("Peso normal")
 elif imc < 30:
-    print("Classificação: Sobrepeso")
+    print("Acima do peso")
 elif imc < 35:
-    print("Classificação: Obesidade grau 1")
+    print("Sobrepeso")
 elif imc < 40:
-    print("Classificação: Obesidade grau 2")
+    print("Obesidade")
 else:
-    print("Classificação: Obesidade grau 3")
+    print("Obesidade grave")
