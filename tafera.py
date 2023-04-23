@@ -10,6 +10,7 @@ print("digite a quantidade de reais do combustivel")
 reais = float (input())
 
 
+
 tempo = (tempo/3600)
 velocidadeMedia = distancia/tempo
 custo = litros*reais
